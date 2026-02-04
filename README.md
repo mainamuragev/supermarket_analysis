@@ -1,99 +1,55 @@
-```markdown
 # 🛒 Supermarket Analysis
 
-## 📌 Project Overview
-This project demonstrates a **data engineering workflow** for analyzing supermarket transactions. It covers:
+## 📌 Overview
+End‑to‑end supermarket transaction analysis:
 - ETL pipeline (Python → PostgreSQL)
 - Query optimization with functional indexes
-- Terminal‑based visualizations (SQL → CSV → gnuplot → PNG)
-- Interactive dashboards (Streamlit deployment)
+- Visualizations (gnuplot PNGs)
+- Interactive dashboard (Streamlit)
 
 ---
 
 ## ⚙️ Tech Stack
-- PostgreSQL (Aiven Cloud)
-- Python (ETL + automation)
-- SQL (schema design, queries, optimization)
-- gnuplot + feh (terminal visualizations)
-- Streamlit (dashboards)
+PostgreSQL · Python · SQL · gnuplot · Streamlit
 
 ---
 
 ## 📂 Data Model
-Main table: `transactions`
-
-| Column           | Type    | Description                  |
-|------------------|---------|------------------------------|
-| transaction_id   | SERIAL  | Primary key                  |
-| store            | TEXT    | Store name                   |
-| customer_type    | TEXT    | Member / Non‑member / Premium|
-| product_line     | TEXT    | Product category             |
-| total_amount     | NUMERIC | Transaction total            |
-| transaction_date | DATE    | Date of purchase             |
+`transactions` table:
+- `transaction_id` (PK)
+- `store`
+- `customer_type`
+- `product_line`
+- `total_amount`
+- `transaction_date`
 
 ---
 
-## 🚀 ETL Pipeline
-1. **Extract**: Raw CSV data ingested via Python.
-2. **Transform**: Cleaned, normalized, enriched.
-3. **Load**: Inserted into PostgreSQL `transactions` table.
-
----
-
-## 🔍 Query Optimization
-
-### Before Indexes
-```sql
-EXPLAIN ANALYZE SELECT SUM(total_amount)
-FROM transactions
-WHERE LOWER(store)='bakershire'
-  AND LOWER(customer_type)='non-member';
-```
-Execution Time: **39 ms**
-
-### After Functional Indexes
-```sql
-CREATE INDEX idx_store_lower ON transactions (LOWER(store));
-CREATE INDEX idx_customer_type_lower ON transactions (LOWER(customer_type));
-```
-Execution Time: **1.3 ms** ✅ **30x faster**
+## 🚀 ETL & Optimization
+- Raw CSV → cleaned → loaded into PostgreSQL  
+- Functional indexes (`LOWER(store)`, `LOWER(customer_type)`) → **30x faster queries**
 
 ---
 
 ## 📊 Visualizations
 
 ### Premium Customers by Store
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+![Premium Customers](images/premium_customers_by_store.png)
 
 ### Total Sales by Store
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+![Total Sales](images/sales_by_store.png)
 
 ### Customer Type Distribution
-`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+![Customer Types](images/customer_type_distribution.png)
 
 ---
 
-## 📈 Dashboards
-Interactive dashboards deployed with **Streamlit**:
-
-- **Customer Insights Dashboard**  
-  Visualizes premium vs non‑member distribution, store sales, and product line breakdown.  
-  👉 Live Demo [(supermarket-analysis.streamlit.app in Bing)](https://www.bing.com/search?q="https%3A%2F%2Fsupermarket-analysis.streamlit.app%2F") *(replace with your actual Streamlit Cloud link)*
-
----
-
-## 📊 Key Takeaways
-- Functional indexes dramatically improve query performance when filtering with `LOWER()`.  
-- Queries scale efficiently even as data volume grows.  
-- Visualizations highlight **business insights**: premium customer concentration, sales distribution, and customer type mix.  
-- Dashboards make insights accessible to non‑technical stakeholders.
+## 📈 Dashboard
+Interactive dashboard with **Streamlit**:
+👉 [Live Demo](https://supermarket-analysis.streamlit.app)
 
 ---
 
 ## 👨‍💻 Author
-**Maina Murage**  
-Big Data Engineer | Cloud‑Native Architect | ETL/Streaming Specialist  
-Focused on reproducible analytics pipelines and performance optimization.
-```
+**Maina Murage** — Big Data Engineer | Cloud‑Native Architect | ETL/Streaming Specialist
 
----
