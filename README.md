@@ -1,15 +1,3 @@
-Absolutely, Maina 👌 — we can build the **README.md directly in terminal** and make sure it includes references to your dashboards. Since you’re working in `~/supermarket_analysis`, here’s the clean workflow:
-
----
-
-## 🔹 Step 1: Create/Edit README.md in terminal
-Open with nano (or your preferred editor):
-```bash
-nano README.md
-```
-
-Paste in a recruiter‑ready structure:
-
 ```markdown
 # 🛒 Supermarket Analysis
 
@@ -31,6 +19,20 @@ This project demonstrates a **data engineering workflow** for analyzing supermar
 
 ---
 
+## 📂 Data Model
+Main table: `transactions`
+
+| Column           | Type    | Description                  |
+|------------------|---------|------------------------------|
+| transaction_id   | SERIAL  | Primary key                  |
+| store            | TEXT    | Store name                   |
+| customer_type    | TEXT    | Member / Non‑member / Premium|
+| product_line     | TEXT    | Product category             |
+| total_amount     | NUMERIC | Transaction total            |
+| transaction_date | DATE    | Date of purchase             |
+
+---
+
 ## 🚀 ETL Pipeline
 1. **Extract**: Raw CSV data ingested via Python.
 2. **Transform**: Cleaned, normalized, enriched.
@@ -39,6 +41,7 @@ This project demonstrates a **data engineering workflow** for analyzing supermar
 ---
 
 ## 🔍 Query Optimization
+
 ### Before Indexes
 ```sql
 EXPLAIN ANALYZE SELECT SUM(total_amount)
@@ -58,7 +61,6 @@ Execution Time: **1.3 ms** ✅ **30x faster**
 ---
 
 ## 📊 Visualizations
-Generated via **gnuplot** in terminal:
 
 ### Premium Customers by Store
 `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
@@ -74,11 +76,17 @@ Generated via **gnuplot** in terminal:
 ## 📈 Dashboards
 Interactive dashboards deployed with **Streamlit**:
 
-- **Driver Performance Dashboard**:  
-  Live Demo [(supermarket-analysis.streamlit.app in Bing)](https://www.bing.com/search?q="https%3A%2F%2Fsupermarket-analysis.streamlit.app%2F") *(replace with your Streamlit Cloud link)*
+- **Customer Insights Dashboard**  
+  Visualizes premium vs non‑member distribution, store sales, and product line breakdown.  
+  👉 Live Demo [(supermarket-analysis.streamlit.app in Bing)](https://www.bing.com/search?q="https%3A%2F%2Fsupermarket-analysis.streamlit.app%2F") *(replace with your actual Streamlit Cloud link)*
 
-- **Customer Insights Dashboard**:  
-  Visualizes premium vs non‑member distribution, store sales, and product line breakdown.
+---
+
+## 📊 Key Takeaways
+- Functional indexes dramatically improve query performance when filtering with `LOWER()`.  
+- Queries scale efficiently even as data volume grows.  
+- Visualizations highlight **business insights**: premium customer concentration, sales distribution, and customer type mix.  
+- Dashboards make insights accessible to non‑technical stakeholders.
 
 ---
 
@@ -87,3 +95,5 @@ Interactive dashboards deployed with **Streamlit**:
 Big Data Engineer | Cloud‑Native Architect | ETL/Streaming Specialist  
 Focused on reproducible analytics pipelines and performance optimization.
 ```
+
+---
