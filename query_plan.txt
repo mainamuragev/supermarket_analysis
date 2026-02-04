@@ -1,0 +1,10 @@
+                                                    QUERY PLAN                                                    
+------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=1815.66..1815.67 rows=1 width=32) (actual time=19.790..19.791 rows=1 loops=1)
+   ->  Seq Scan on transactions  (cost=0.00..1815.66 rows=1 width=6) (actual time=0.097..19.748 rows=179 loops=1)
+         Filter: ((lower(store) = 'bakershire'::text) AND (lower(customer_type) = 'non-member'::text))
+         Rows Removed by Filter: 50604
+ Planning Time: 0.379 ms
+ Execution Time: 19.927 ms
+(6 rows)
+
