@@ -40,7 +40,7 @@ It includes reproducible ETL pipelines, inline visualizations, and a live intera
 
 ---
 
-## 🛠️Tech Stack
+## Tech Stack
 - **Python** (Pandas, Seaborn, Matplotlib)
 - **Streamlit** for interactive dashboards
 - **GitHub** for version control and collaboration
