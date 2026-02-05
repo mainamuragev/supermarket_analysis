@@ -1,11 +1,11 @@
-# 🛒 Supermarket Analysis
+#  Supermarket Analysis
 
 This project provides insights into supermarket transactions and customer behavior using Python, Pandas, and Streamlit.  
 It includes reproducible ETL pipelines, inline visualizations, and a live interactive dashboard.
 
 ---
 
-## 🚀 Features
+##  Features
 - Data cleaning and transformation with **Pandas**
 - Interactive dashboard built with **Streamlit**
 - Inline visualizations embedded directly in the README
@@ -13,7 +13,7 @@ It includes reproducible ETL pipelines, inline visualizations, and a live intera
 
 ---
 
-## 📊 Visualizations
+##  Visualizations
 
 <div align="center">
 
@@ -28,11 +28,11 @@ It includes reproducible ETL pipelines, inline visualizations, and a live intera
 
 </div>
 
-👉 [View the Live Dashboard](https://nse-stock-pipeline.netlify.app/)
+ [View the Live Dashboard](https://nse-stock-pipeline.netlify.app/)
 
 ---
 
-## 📂 Dataset
+##  Dataset
 - `supermarket_data.csv` — Raw transactional data
 - `sales_by_store.csv` — Aggregated sales per store
 - `premium_customers_by_store.csv` — Premium customer counts per store
@@ -40,19 +40,19 @@ It includes reproducible ETL pipelines, inline visualizations, and a live intera
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️Tech Stack
 - **Python** (Pandas, Seaborn, Matplotlib)
 - **Streamlit** for interactive dashboards
 - **GitHub** for version control and collaboration
 
 ---
 
-## 👨‍💻 Author
+##  Author
 **Maina Murage** — Big Data Engineer | Cloud‑Native Architect | ETL/Streaming Specialist
 
 ---
 
-## ⚡ How to Run Locally
+##  How to Run Locally
 Clone the repo and install requirements:
 
 ```bash
