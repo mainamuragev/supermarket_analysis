@@ -31,6 +31,11 @@ PostgreSQL · Python · SQL · gnuplot · Streamlit
 Interactive dashboard with **Streamlit**:  
 👉 [Live Demo](https://supermarket-analysis.streamlit.app/)
 
+
+## 📈 Dashboard
+Interactive dashboard with **Streamlit**:  
+👉 [Live Demo](https://supermarket-analysis.streamlit.app/)
+
 ---
 
 ## 👨‍💻 Author
