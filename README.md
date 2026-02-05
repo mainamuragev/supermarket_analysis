@@ -14,23 +14,6 @@ PostgreSQL · Python · SQL · gnuplot · Streamlit
 
 ---
 
-## 📂 Data Model
-`transactions` table:
-- `transaction_id` (PK)
-- `store`
-- `customer_type`
-- `product_line`
-- `total_amount`
-- `transaction_date`
-
----
-
-## 🚀 ETL & Optimization
-- Raw CSV → cleaned → loaded into PostgreSQL  
-- Functional indexes (`LOWER(store)`, `LOWER(customer_type)`) → **30x faster queries**
-
----
-
 ## 📊 Visualizations
 
 ### Premium Customers by Store
@@ -45,11 +28,12 @@ PostgreSQL · Python · SQL · gnuplot · Streamlit
 ---
 
 ## 📈 Dashboard
-Interactive dashboard with **Streamlit**:
-👉 [Live Demo](https://supermarket-analysis.streamlit.app)
+Interactive dashboard with **Streamlit**:  
+👉 [Live Demo](https://supermarket-analysis.streamlit.app/)
 
 ---
 
 ## 👨‍💻 Author
 **Maina Murage** — Big Data Engineer | Cloud‑Native Architect | ETL/Streaming Specialist
+
 
